@@ -36,7 +36,7 @@ ansible-04-role
 1. Создан
  
 
-2. Cкачал роль
+2. Роль успешно скачалась. 
 ```bash
 root@server1:~/ansible_role# ansible-galaxy install -r requirements.yml -p roles
 Starting galaxy role install process
@@ -112,7 +112,7 @@ root@server1:~/ansible_role/roles# ansible-galaxy role init vector-role --force
         msg: "http://{{ ansible_host }}/#http://{{ hostvars['clickhouse-01'].ansible_host }}:8123/?user={{ clickhouse_user }}"
 ```
 
-10. Добавил файл [requirements.yml](https://github.com/Valdem88/dev-17_ansible-04-role-yakovlev_vs)
+10. Добавил файл [requirements.yml](https://github.com/Valdem88/dev-17_ansible-04-role-yakovlev_vs/blob/main/requirements.yml)
 
 
 11. Установил роли
@@ -129,13 +129,19 @@ Starting galaxy role install process
 ```
 
 
-12.
+12. Запуск playbook и успешное выполнение.
 ```bash
 root@server1:~/ansible_role# ansible-playbook -i inventory/test.yml site.yml --diff
 ```
 
 ![](pic/ansible_job.jpg)
 
+---
+
+  - [playbook](https://github.com/Valdem88/dev-17_ansible-04-role-yakovlev_vs/blob/main/site.yml)
+  - [vector-role](https://github.com/Valdem88/vector-role.git)
+  - [lighthouse-role](https://github.com/Valdem88//lighthouse-role.git)
+  - [clickhouse-role](https://github.com/Valdem88/clickhouse-role.git)
 
 ---
 
